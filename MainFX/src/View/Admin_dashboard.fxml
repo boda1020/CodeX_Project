@@ -138,7 +138,7 @@
             <TextField alignment="TOP_LEFT" maxWidth="300.0" promptText="Search for a student or course..." styleClass="search-field" stylesheets="@../Styles/Dashboard.css" BorderPane.alignment="CENTER" />
          </center>
          <top>
-            <Label styleClass="dashboard-title" stylesheets="@../Styles/Dashboard.css" text="University Student Results Management System" BorderPane.alignment="CENTER" />
+            <Label styleClass="dashboard-title" stylesheets="@../Styles/Dashboard.css" text="University Student Management System" BorderPane.alignment="CENTER" />
          </top>
          <right>
             <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="20.0" styleClass="top-icons" stylesheets="@../resources.Styles/Dashboard.css" BorderPane.alignment="CENTER">

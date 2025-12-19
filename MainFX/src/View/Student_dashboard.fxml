@@ -87,7 +87,7 @@
         <top>
             <BorderPane minHeight="150.0" styleClass="top-bar" stylesheets="@../Styles/Dashboard.css" BorderPane.alignment="CENTER">
                 <top>
-                    <Label styleClass="dashboard-title" stylesheets="@../Styles/Dashboard.css" text="University Student Results Management System" BorderPane.alignment="CENTER" />
+                    <Label styleClass="dashboard-title" stylesheets="@../Styles/Dashboard.css" text="University Student Management System" BorderPane.alignment="CENTER" />
                 </top>
                 <right>
                     <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="20.0" styleClass="top-icons">
