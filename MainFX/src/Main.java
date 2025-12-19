@@ -15,7 +15,7 @@ public class Main extends Application {
             System.setProperty("prism.allowhidpi", "false");
 
             // تحميل FXML – المسار صح لأن resources/View/Login.fxml موجود
-            FXMLLoader loader = new FXMLLoader(Main.class.getResource("/View/Report.fxml"));
+            FXMLLoader loader = new FXMLLoader(Main.class.getResource("/View/Login.fxml"));
             if (loader.getLocation() == null) {
                 throw new IllegalStateException("FXML file not found: /View/Login.fxml\"");
             }
