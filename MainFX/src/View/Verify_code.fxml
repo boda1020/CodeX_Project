@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.SVGPath?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="Controller.VerifyCodeController"
+            style="-fx-background-color: #e0e0e0;">
+
+    <center>
+        <VBox alignment="CENTER">
+            <HBox alignment="CENTER" prefHeight="560.0" prefWidth="870.0" spacing="0.0"
+                  style="-fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 20, 0, 0, 5); -fx-background-radius: 20;">
+
+                <!-- Left Panel - Purple Gradient -->
+                <VBox alignment="CENTER" prefHeight="560.0" prefWidth="355.0" spacing="30.0"
+                      style="-fx-background-color: linear-gradient(to bottom, #262451 0%, #3f4082 100%);
+                             -fx-background-radius: 20 0 0 20; -fx-padding: 50;">
+
+                    <!-- Shield Icon -->
+                    <StackPane prefWidth="120.0" prefHeight="120.0">
+                        <SVGPath content="M 60 10 L 20 30 L 20 50 C 20 85 38 118 60 130 C 82 118 100 85 100 50 L 100 30 Z"
+                                 fill="transparent" stroke="white" strokeWidth="4.0"/>
+                        <SVGPath content="M 45 60 L 55 70 L 75 45"
+                                 fill="transparent" stroke="white" strokeWidth="5.0" strokeLineCap="ROUND"/>
+                    </StackPane>
+
+                    <!-- Title -->
+                    <VBox alignment="CENTER" spacing="5.0">
+                        <Label text="Verification"
+                               style="-fx-text-fill: white; -fx-font-size: 42; -fx-font-weight: bold; -fx-font-family: 'Arial';"/>
+                        <Label text="Required"
+                               style="-fx-text-fill: white; -fx-font-size: 42; -fx-font-weight: bold; -fx-font-family: 'Arial';"/>
+                    </VBox>
+
+                    <!-- Message Box -->
+                    <Label text="We've sent a 6-digit code&#10;to your email."
+                           textAlignment="CENTER"
+                           wrapText="true"
+                           style="-fx-text-fill: #262451;
+                                  -fx-font-size: 15;
+                                  -fx-font-family: 'Arial';
+                                  -fx-padding: 20 30;
+                                  -fx-background-color: white;
+                                  -fx-background-radius: 15;">
+                        <VBox.margin>
+                            <Insets top="20.0"/>
+                        </VBox.margin>
+                    </Label>
+                </VBox>
+
+                <!-- Right Panel - Light Gray/White -->
+                <VBox prefHeight="560.0" prefWidth="515.0" spacing="0.0"
+                      style="-fx-background-color: #f8f9fa; -fx-background-radius: 0 20 20 0; -fx-padding: 50 60;">
+
+                    <!-- Close Button -->
+                    <HBox alignment="TOP_RIGHT" prefHeight="30.0">
+                        <Button fx:id="closeButton"
+                                text="✕"
+                                style="-fx-background-color: transparent;
+                                       -fx-text-fill: #999999;
+                                       -fx-font-size: 24;
+                                       -fx-font-family: 'Arial';
+                                       -fx-cursor: hand;">
+                        </Button>
+                    </HBox>
+
+                    <!-- Content -->
+                    <VBox spacing="20.0" alignment="TOP_CENTER">
+
+                        <!-- Title -->
+                        <Label text="Verify Code"
+                               style="-fx-text-fill: #262451; -fx-font-size: 36; -fx-font-weight: bold; -fx-font-family: 'Arial';">
+                            <VBox.margin>
+                                <Insets top="0.0" bottom="10.0"/>
+                            </VBox.margin>
+                        </Label>
+
+                        <!-- Email Icon -->
+                        <StackPane prefWidth="80.0" prefHeight="80.0">
+                            <!-- Email Envelope -->
+                            <SVGPath content="M 15 20 L 55 20 L 55 50 L 15 50 Z M 15 20 L 35 35 L 55 20"
+                                     fill="transparent" stroke="#262451" strokeWidth="3.0"/>
+                            <!-- Magnifying Glass Circle -->
+                            <Circle centerX="45" centerY="42" radius="12"
+                                    fill="transparent" stroke="#262451" strokeWidth="2.5"/>
+                            <!-- Magnifying Glass Handle -->
+                            <SVGPath content="M 53 50 L 60 57"
+                                     fill="transparent" stroke="#262451" strokeWidth="2.5" strokeLineCap="ROUND"/>
+                        </StackPane>
+
+                        <!-- Enter Code Label -->
+                        <Label text="Enter Code"
+                               style="-fx-text-fill: #333333; -fx-font-size: 16; -fx-font-weight: 600; -fx-font-family: 'Arial';">
+                            <VBox.margin>
+                                <Insets top="10.0"/>
+                            </VBox.margin>
+                        </Label>
+
+                        <!-- Code Input Field -->
+                        <TextField fx:id="codeInput"
+                                   promptText="e.g, 123456"
+                                   prefHeight="50.0"
+                                   style="-fx-background-color: white;
+                                          -fx-border-color: #dddddd;
+                                          -fx-border-width: 2;
+                                          -fx-border-radius: 10;
+                                          -fx-background-radius: 10;
+                                          -fx-font-size: 16;
+                                          -fx-font-family: 'Arial';
+                                          -fx-padding: 0 20;
+                                          -fx-prompt-text-fill: #999999;">
+                        </TextField>
+
+                        <!-- Timer and Resend -->
+                        <HBox alignment="CENTER_LEFT" spacing="15.0" prefHeight="40.0">
+                            <Label fx:id="timerLabel"
+                                   text="Code sent. Resend&#10;available in 30 seconds."
+                                   style="-fx-font-size: 13; -fx-text-fill: #808080; -fx-font-family: 'Arial';"/>
+
+                            <Button fx:id="resendButton"
+                                    text="Resend Code ↻"
+                                    disable="true"
+                                    style="-fx-background-color: #262451;
+                                           -fx-text-fill: white;
+                                           -fx-background-radius: 20;
+                                           -fx-padding: 8 20;
+                                           -fx-font-size: 13;
+                                           -fx-font-family: 'Arial';
+                                           -fx-cursor: hand;">
+                            </Button>
+                        </HBox>
+
+                        <!-- Confirm Button -->
+                        <Button fx:id="confirmButton"
+                                text="Confirm Code"
+                                prefHeight="50.0"
+                                maxWidth="Infinity"
+                                style="-fx-background-color: #262451;
+                                       -fx-text-fill: white;
+                                       -fx-background-radius: 25;
+                                       -fx-font-size: 16;
+                                       -fx-font-weight: bold;
+                                       -fx-font-family: 'Arial';
+                                       -fx-cursor: hand;">
+                            <VBox.margin>
+                                <Insets top="10.0"/>
+                            </VBox.margin>
+                        </Button>
+
+                    </VBox>
+                </VBox>
+            </HBox>
+
+            <padding>
+                <Insets bottom="50.0" left="50.0" right="50.0" top="50.0"/>
+            </padding>
+        </VBox>
+    </center>
+</BorderPane>

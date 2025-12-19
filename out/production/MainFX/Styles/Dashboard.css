@@ -1,0 +1,324 @@
+/* dashboard.css - Admin Dashboard */
+
+/* الجذر */
+.root {
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-background-color: #f4f6f9;
+}
+
+/* الـ Sidebar */
+.sidebar {
+    -fx-background-color: linear-gradient(to bottom, #2c3e50, #1a252f);
+    -fx-padding: 0;
+}
+
+/* الـ VBox داخل الـ Sidebar */
+.sidebar-vbox {
+    -fx-spacing: 20;
+    -fx-padding: 30;
+    -fx-alignment: top-center;
+}
+
+/* اللوجو */
+.logo-box {
+    -fx-spacing: 12;
+    -fx-alignment: center-left;
+    -fx-padding: 0 0 25 0;
+    -fx-background-color: transparent;
+    -fx-background-radius: 15;
+    -fx-cursor: hand;
+    -fx-transition: all 0.3s ease;
+}
+
+.logo-box:hover {
+    -fx-background-color: #34495e;
+    -fx-effect: dropshadow(gaussian, #f39c12, 10, 0.5, 0, 0);
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+.logo-icon {
+    -fx-font-family: "Segoe UI Emoji";
+    -fx-font-size: 38;
+    -fx-text-fill: #34495e;
+}
+
+.logo-text {
+    -fx-font-size: 26;
+    -fx-font-weight: bold;
+    -fx-text-fill: #f1c40f;
+}
+
+/* خط الفاصل */
+.separator-line {
+    -fx-background-color: #34495e;
+    -fx-pref-height: 2;
+    -fx-pref-width: 220;
+}
+
+/* عناصر القائمة */
+.menu-item {
+    -fx-spacing: 14;
+    -fx-alignment: center-left;
+    -fx-padding: 14 25;
+    -fx-background-color: transparent;
+    -fx-background-radius: 12;
+    -fx-cursor: hand;
+    -fx-transition: all 0.3s ease;
+}
+
+.menu-item:hover {
+    -fx-background-color: #34495e;
+    -fx-effect: dropshadow(gaussian, #f39c12, 6, 0.3, 0, 0);
+    -fx-scale-x: 1.02;
+    -fx-scale-y: 1.02;
+    -fx-translate-x: 3;
+}
+
+.menu-icon {
+    -fx-font-family: "Segoe UI Emoji";
+    -fx-font-size: 22;
+    -fx-text-fill: #bdc3c7;
+}
+
+.menu-text {
+    -fx-font-size: 15;
+    -fx-text-fill: #ecf0f1;
+    -fx-font-weight: bold;
+}
+
+.selected-item {
+    -fx-background-color: #34495e;
+
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-translate-x: 5;
+}
+
+/* تأثير خاص للبروفايل */
+.profile-item {
+    -fx-background-color: #27ae60;
+    -fx-effect: dropshadow(gaussian, #2ecc71, 10, 0.5, 0, 0);
+}
+
+.profile-item:hover {
+    -fx-background-color: #219653;
+    -fx-scale-x: 1.03;
+    -fx-scale-y: 1.03;
+}
+
+/* تسجيل الخروج */
+.logout-item {
+    -fx-background-color: #c0392b;
+    -fx-background-radius: 12;
+    -fx-effect: dropshadow(gaussian, #e74c3c, 8, 0.4, 0, 0);
+}
+
+.logout-item:hover {
+    -fx-background-color: #e74c3c;
+    -fx-scale-x: 1.03;
+    -fx-scale-y: 1.03;
+    -fx-translate-x: 5;
+    -fx-effect: dropshadow(gaussian, #c0392b, 12, 0.6, 0, 0);
+}
+
+/* الـ Top Bar */
+.top-bar {
+    -fx-background-color: linear-gradient(to bottom, #ecf0f1, #d6dbdf);
+    -fx-padding: 0 30 0 30;
+    -fx-alignment: center-left;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0.2, 0, 2);
+    -fx-spacing: 20;
+}
+
+/* اسم المشروع */
+.dashboard-title {
+    -fx-font-size: 20;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+}
+
+/* شريط البحث */
+.search-field {
+    -fx-background-color: white;
+    -fx-background-radius: 25;
+    -fx-padding: 10 15;
+    -fx-font-size: 14;
+    -fx-pref-width: 250;
+    -fx-effect: innershadow(gaussian, rgba(0,0,0,0.1), 5, 0, 0, 0);
+    -fx-transition: all 0.3s ease;
+}
+
+.search-field:hover, .search-field:focused {
+    -fx-pref-width: 350;
+    -fx-effect: dropshadow(gaussian, #3498db, 10, 0.3, 0, 0);
+}
+
+/* أيقونات الإشعارات */
+.notification-icon {
+    -fx-font-family: "Segoe UI Emoji";
+    -fx-font-size: 24;
+    -fx-text-fill: #7f8c8d;
+    -fx-cursor: hand;
+    -fx-transition: all 0.3s ease;
+}
+
+.notification-icon:hover {
+    -fx-scale-x: 1.2;
+    -fx-scale-y: 1.2;
+    -fx-text-fill: #3498db;
+}
+
+/* بادج الإشعارات */
+.badge {
+    -fx-background-color: #e74c3c;
+    -fx-background-radius: 10;
+    -fx-pref-width: 18;
+    -fx-pref-height: 18;
+    -fx-alignment: center;
+    -fx-text-fill: white;
+    -fx-font-size: 10;
+    -fx-font-weight: bold;
+}
+
+/* صورة البروفايل */
+.profile-circle {
+    -fx-fill: #3498db;
+    -fx-cursor: hand;
+    -fx-transition: all 0.5s ease;
+}
+
+.profile-circle:hover {
+    -fx-rotate: 360;
+    -fx-effect: dropshadow(gaussian, #3498db, 15, 0.5, 0, 0);
+}
+
+/* البادج الأحمر */
+.badge {
+    -fx-background-color: #e74c3c;
+    -fx-background-radius: 10;
+    -fx-pref-width: 18;
+    -fx-pref-height: 18;
+    -fx-effect: dropshadow(gaussian, #c0392b, 5, 0.5, 0, 0);
+    -fx-alignment: center;
+    -fx-cursor: hand;
+    -fx-transition: all 0.3s ease;
+}
+
+.badge:hover {
+    -fx-scale-x: 1.2;
+    -fx-scale-y: 1.2;
+    -fx-background-color: #c0392b;
+}
+
+/* نص البادج */
+.badge-text {
+    -fx-text-fill: white;
+    -fx-font-size: 10;
+    -fx-font-weight: bold;
+}
+
+.kpi-container {
+    -fx-spacing: 20;
+    -fx-padding: 30;
+    -fx-wrap: true;
+}
+
+.kpi-card {
+    -fx-background-color: white;
+    -fx-background-radius: 15;
+    -fx-padding: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 15, 0.2, 0, 5);
+    -fx-pref-width: 220;
+    -fx-alignment: center-left;
+    -fx-spacing: 10;
+    -fx-transition: all 0.3s ease;
+}
+
+.kpi-card:hover {
+    -fx-translate-y: -5;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 20, 0.3, 0, 10);
+}
+
+.kpi-icon {
+    -fx-font-family: "Segoe UI Emoji";
+    -fx-font-size: 32;
+}
+
+.kpi-number {
+    -fx-font-size: 28;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+}
+
+.kpi-label {
+    -fx-font-size: 14;
+    -fx-text-fill: #7f8c8d;
+}
+
+/* حاوي البطاقات */
+.kpi-container {
+    -fx-spacing: 20;
+    -fx-padding: 30 30 0 30;
+    -fx-wrap: true;
+}
+
+/* البطاقة */
+.kpi-card {
+    -fx-background-color: white;
+    -fx-background-radius: 15;
+    -fx-padding: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 15, 0.2, 0, 5);
+    -fx-pref-width: 220;
+    -fx-alignment: center-left;
+    -fx-spacing: 10;
+    -fx-transition: all 0.3s ease;
+}
+
+.kpi-card:hover {
+    -fx-translate-y: -5;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 20, 0.3, 0, 10);
+}
+
+/* الأيقونة */
+.kpi-icon {
+    -fx-font-family: "Segoe UI Emoji";
+    -fx-font-size: 32;
+}
+
+/* الرقم */
+.kpi-number {
+    -fx-font-size: 32;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+}
+
+/* النص */
+.kpi-label {
+    -fx-font-size: 14;
+    -fx-text-fill: #7f8c8d;
+}
+
+/* الـ Grid الرئيسي */
+.dashboard-grid {
+    -fx-hgap: 20;
+    -fx-vgap: 20;
+    -fx-padding: 30;
+    -fx-background-color: #f4f6f9;
+}
+
+/* الـ Line Chart */
+.progress-chart {
+    -fx-background-color: white;
+    -fx-background-radius: 15;
+    -fx-padding: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 15, 0.2, 0, 5);
+}
+
+/* الـ Bar Chart */
+.top-students-chart {
+    -fx-background-color: white;
+    -fx-background-radius: 15;
+    -fx-padding: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 15, 0.2, 0, 5);
+}

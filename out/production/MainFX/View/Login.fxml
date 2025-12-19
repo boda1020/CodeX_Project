@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane style="-fx-background-color: #f8fafc;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.LoginController">
+
+    <center>
+        <HBox alignment="CENTER" prefHeight="500.0" prefWidth="800" spacing="0">
+
+            <!-- Left Side - Decorative Panel -->
+            <VBox alignment="CENTER" prefHeight="600.0" prefWidth="350" style="-fx-background-color: linear-gradient(to bottom right, #262451, #1a1d3d); -fx-background-radius: 15 0 0 15;">
+                <VBox alignment="CENTER" spacing="15" style="-fx-padding: 30;">
+                    <Label style="-fx-font-size: 45;" text="🎓" textFill="WHITE" />
+                    <VBox alignment="CENTER" spacing="6">
+                        <Label style="-fx-font-size: 26; -fx-font-weight: bold; -fx-text-fill: white;" text="University" />
+                        <Label style="-fx-font-size: 15; -fx-text-fill: rgba(255,255,255,0.8);" text="Results System" />
+                    </VBox>
+                    <VBox alignment="CENTER" spacing="4" style="-fx-padding: 20 0 0 0;">
+                        <Label style="-fx-font-size: 16; -fx-font-weight: bold; -fx-text-fill: white;" text="Welcome Back!" />
+                        <Label style="-fx-font-size: 11; -fx-text-fill: rgba(255,255,255,0.7);" text="Sign in to access your account" />
+                    </VBox>
+                </VBox>
+            </VBox>
+
+            <!-- Right Side - Login Form -->
+            <VBox alignment="CENTER" prefHeight="600.0" prefWidth="450" spacing="20" style="-fx-background-color: white; -fx-background-radius: 0 15 15 0; -fx-padding: 35;">
+
+                <!-- Login Header -->
+                <VBox alignment="CENTER_LEFT" spacing="6">
+                    <Label style="-fx-font-size: 24; -fx-font-weight: bold; -fx-text-fill: #262451;" text="Login" />
+                    <Label style="-fx-font-size: 12; -fx-text-fill: #64748b;" text="Enter your credentials to continue" />
+                </VBox>
+
+                <!-- Login Form -->
+                <VBox prefWidth="350" spacing="18">
+                    <!-- Username/Email Field -->
+                    <VBox spacing="5">
+                        <Label style="-fx-font-size: 13; -fx-font-weight: 600; -fx-text-fill: #262451;" text="Username or Email" />
+                        <TextField fx:id="usernameField" promptText="Enter username or email" style="-fx-background-radius: 10; -fx-padding: 11; -fx-pref-height: 42; -fx-background-color: #f8fafc; -fx-border-color: #e2e8f0; -fx-border-width: 1.5; -fx-border-radius: 10; -fx-font-size: 13;" />
+                    </VBox>
+
+                    <!-- Password Field -->
+                    <VBox spacing="5">
+                        <HBox alignment="CENTER_LEFT" spacing="5">
+                            <Label style="-fx-font-size: 13; -fx-font-weight: 600; -fx-text-fill: #262451;" text="Password" />
+                            <Region HBox.hgrow="ALWAYS" />
+                            <Hyperlink fx:id="forgotPasswordLink" style="-fx-font-size: 11; -fx-text-fill: #262451; -fx-font-weight: 600;" text="Forgot Password?" />
+                        </HBox>
+                        <PasswordField fx:id="passwordField" promptText="Enter your password" style="-fx-background-radius: 10; -fx-padding: 11; -fx-pref-height: 42; -fx-background-color: #f8fafc; -fx-border-color: #e2e8f0; -fx-border-width: 1.5; -fx-border-radius: 10; -fx-font-size: 13;" />
+                    </VBox>
+
+                    <!-- User Type Selection -->
+                    <VBox spacing="5">
+                        <Label style="-fx-font-size: 13; -fx-font-weight: 600; -fx-text-fill: #262451;" text="Login as" />
+                        <HBox spacing="10">
+                            <ToggleButton fx:id="studentToggle" style="-fx-background-color: #262451; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 8; -fx-padding: 9 18; -fx-font-size: 12;" text="Student" selected="true" />
+                            <ToggleButton fx:id="adminToggle" style="-fx-background-color: #f1f5f9; -fx-text-fill: #64748b; -fx-font-weight: bold; -fx-background-radius: 8; -fx-padding: 9 18; -fx-font-size: 12;" text="Administrator" />
+                        </HBox>
+                    </VBox>
+
+                    <!-- Login Button -->
+                    <Button fx:id="loginButton" style="-fx-background-color: #262451; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 14; -fx-background-radius: 10; -fx-padding: 12; -fx-cursor: hand; -fx-effect: dropshadow(gaussian, rgba(38,36,81,0.1), 5, 0, 0, 2);" text="Login" />
+
+                    <!-- Admin Registration Link (يظهر فقط للأدمن) -->
+                    <HBox fx:id="adminRegisterBox" alignment="CENTER" spacing="5" visible="false" managed="false" style="-fx-padding: 10 0 0 0;">
+                        <Label style="-fx-font-size: 12; -fx-text-fill: #64748b;" text="Need admin access?" />
+                        <Hyperlink fx:id="adminRegisterLink" style="-fx-font-size: 12; -fx-text-fill: #262451; -fx-font-weight: 600;" text="Admin Registration" />
+                    </HBox>
+                </VBox>
+
+                <!-- Footer -->
+                <VBox alignment="CENTER" spacing="4" style="-fx-padding: 10 0 0 0;">
+                    <Separator prefWidth="300" />
+                    <Label style="-fx-font-size: 10; -fx-text-fill: #94a3b8;" text="© 2024 University System" />
+                </VBox>
+            </VBox>
+        </HBox>
+    </center>
+</BorderPane>

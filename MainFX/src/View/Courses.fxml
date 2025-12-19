@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="Controller.CoursesController"
+            style="-fx-background-color: #f8fafc;">
+
+    <!-- Header with Back button -->
+    <top>
+        <VBox spacing="0">
+            <HBox style="-fx-background-color: #262451; -fx-padding: 15;" alignment="CENTER_LEFT">
+                <Button fx:id="btnBack" text="◀ Back to Dashboard" onAction="#handleBack"
+                        style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-weight: bold;
+                               -fx-font-size: 16; -fx-border-color: white; -fx-border-width: 1.5; -fx-border-radius: 8;
+                               -fx-padding: 8 20; -fx-cursor: hand;"/>
+                <Region HBox.hgrow="ALWAYS"/>
+                <Label text="Courses Management"
+                       style="-fx-text-fill: white; -fx-font-size: 20; -fx-font-weight: bold;"/>
+                <Region HBox.hgrow="ALWAYS"/>
+            </HBox>
+
+            <VBox alignment="CENTER" style="-fx-padding: 30;">
+                <Label text="University Student Results Management System"
+                       style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #262451;"/>
+            </VBox>
+        </VBox>
+    </top>
+
+    <!-- Main Content with ScrollPane -->
+    <center>
+        <ScrollPane fitToWidth="true" fitToHeight="true" style="-fx-background: #f8fafc;">
+            <VBox alignment="CENTER" spacing="40" style="-fx-padding: 40;">
+
+                <!-- Form Container -->
+                <VBox maxWidth="600" spacing="22"
+                      style="-fx-background-color: white; -fx-background-radius: 20; -fx-padding: 35;
+                             -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.16), 28, 0.22, 0, 12);
+                             -fx-border-color: #262451; -fx-border-radius: 20; -fx-border-width: 2;">
+
+                    <!-- Form Title -->
+                    <Label text="Manage Courses"
+                           style="-fx-font-size: 26px; -fx-font-weight: bold; -fx-text-fill: #262451;"
+                           alignment="CENTER"/>
+
+                    <!-- Form Fields -->
+                    <GridPane hgap="20" vgap="15">
+                        <columnConstraints>
+                            <ColumnConstraints percentWidth="40"/>
+                            <ColumnConstraints percentWidth="60"/>
+                        </columnConstraints>
+
+                        <!-- Course ID -->
+                        <Label text="Course ID"
+                               style="-fx-font-size: 14; -fx-font-weight: 600; -fx-text-fill: #262451;"
+                               GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                        <TextField fx:id="txtCourseId" editable="false" promptText="Auto-generated"
+                                   style="-fx-background-radius: 12; -fx-padding: 10; -fx-pref-height: 45; -fx-background-color: #f8fafc;"
+                                   GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                        <!-- Course Code -->
+                        <Label text="Course Code"
+                               style="-fx-font-size: 14; -fx-font-weight: 600; -fx-text-fill: #262451;"
+                               GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                        <TextField fx:id="txtCourseCode" promptText="e.g. CS101"
+                                   style="-fx-background-radius: 12; -fx-padding: 10; -fx-pref-height: 45;"
+                                   GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                        <!-- Course Name -->
+                        <Label text="Course Name"
+                               style="-fx-font-size: 14; -fx-font-weight: 600; -fx-text-fill: #262451;"
+                               GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                        <TextField fx:id="txtCourseName" promptText="e.g. Data Structures"
+                                   style="-fx-background-radius: 12; -fx-padding: 10; -fx-pref-height: 45;"
+                                   GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+                        <!-- Credit Hours -->
+                        <Label text="Credit Hours"
+                               style="-fx-font-size: 14; -fx-font-weight: 600; -fx-text-fill: #262451;"
+                               GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                        <TextField fx:id="txtCreditHours" promptText="e.g. 3"
+                                   style="-fx-background-radius: 12; -fx-padding: 10; -fx-pref-height: 45;"
+                                   GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+                        <!-- Department -->
+                        <Label text="Department"
+                               style="-fx-font-size: 14; -fx-font-weight: 600; -fx-text-fill: #262451;"
+                               GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+                        <TextField fx:id="txtDepartment" promptText="e.g. Computer Science"
+                                   style="-fx-background-radius: 12; -fx-padding: 10; -fx-pref-height: 45;"
+                                   GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+                        <!-- Instructor Name -->
+                        <Label text="Instructor Name"
+                               style="-fx-font-size: 14; -fx-font-weight: 600; -fx-text-fill: #262451;"
+                               GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+                        <TextField fx:id="txtInstructorName" promptText="e.g. Dr. Ahmed Smith"
+                                   style="-fx-background-radius: 12; -fx-padding: 10; -fx-pref-height: 45;"
+                                   GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+
+                        <!-- Room -->
+                        <Label text="Room"
+                               style="-fx-font-size: 14; -fx-font-weight: 600; -fx-text-fill: #262451;"
+                               GridPane.rowIndex="6" GridPane.columnIndex="0"/>
+                        <TextField fx:id="txtRoom" promptText="e.g. CS-205"
+                                   style="-fx-background-radius: 12; -fx-padding: 10; -fx-pref-height: 45;"
+                                   GridPane.rowIndex="6" GridPane.columnIndex="1"/>
+
+                        <!-- Schedule -->
+                        <Label text="Schedule"
+                               style="-fx-font-size: 14; -fx-font-weight: 600; -fx-text-fill: #262451;"
+                               GridPane.rowIndex="7" GridPane.columnIndex="0"/>
+                        <TextField fx:id="txtSchedule" promptText="e.g. Mon and Wed 10:00-11:30"
+                                   style="-fx-background-radius: 12; -fx-padding: 10; -fx-pref-height: 45;"
+                                   GridPane.rowIndex="7" GridPane.columnIndex="1"/>
+
+                        <!-- Level -->
+                        <Label text="Level"
+                               style="-fx-font-size: 14; -fx-font-weight: 600; -fx-text-fill: #262451;"
+                               GridPane.rowIndex="8" GridPane.columnIndex="0"/>
+                        <ComboBox fx:id="cmbLevel" promptText="Select Level"
+                                  style="-fx-background-radius: 12; -fx-padding: 10; -fx-pref-height: 45;"
+                                  GridPane.rowIndex="8" GridPane.columnIndex="1"/>
+
+                        <!-- File chooser button -->
+                        <Button fx:id="btnChooseFile" text="📁 Choose Course File from Device" onAction="#handleChooseFile"
+                                style="-fx-background-color: #262451; -fx-text-fill: white; -fx-font-weight: bold;
+                                       -fx-font-size: 16; -fx-background-radius: 15; -fx-padding: 14; -fx-pref-width: 400; -fx-cursor: hand;"
+                                GridPane.rowIndex="9" GridPane.columnIndex="0" GridPane.columnSpan="2"/>
+
+                        <!-- File name display -->
+                        <Label fx:id="lblFilePath" text="No file selected"
+                               style="-fx-text-fill: #666; -fx-font-size: 14; -fx-padding: 5 0;"
+                               GridPane.rowIndex="10" GridPane.columnIndex="0" GridPane.columnSpan="2"/>
+                    </GridPane>
+
+                    <Separator style="-fx-padding: 15 0;"/>
+
+                    <!-- Action Buttons - Two buttons centered -->
+                    <HBox spacing="50" alignment="CENTER">
+                        <Button fx:id="btnAdd" text="＋ Add" onAction="#handleAdd"
+                                style="-fx-background-color: #262451; -fx-text-fill: white; -fx-font-weight: bold;
+                                       -fx-font-size: 18; -fx-background-radius: 45; -fx-padding: 16 70; -fx-min-width: 240; -fx-cursor: hand;"/>
+
+                        <Button fx:id="btnClear" text="⎚ Clear" onAction="#handleClear"
+                                style="-fx-background-color: #262451; -fx-text-fill: white; -fx-font-weight: bold;
+                                       -fx-font-size: 18; -fx-background-radius: 45; -fx-padding: 16 70; -fx-min-width: 240; -fx-cursor: hand;"/>
+                    </HBox>
+                </VBox>
+            </VBox>
+        </ScrollPane>
+    </center>
+</BorderPane>

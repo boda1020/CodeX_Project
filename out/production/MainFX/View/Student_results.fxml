@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane style="-fx-background-color: #f8fafc;"
+            xmlns="http://javafx.com/javafx/25"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="Controller.StudentResultsController">
+
+    <!-- Top Bar -->
+    <top>
+        <HBox alignment="CENTER" spacing="20" style="-fx-background-color: #262451; -fx-padding: 20;">
+            <Button fx:id="btnBack" style="-fx-background-color: transparent;
+                                           -fx-text-fill: white;
+                                           -fx-font-size: 14;
+                                           -fx-border-color: rgba(255,255,255,0.3);
+                                           -fx-border-radius: 8;
+                                           -fx-background-radius: 8;
+                                           -fx-padding: 10 20;"
+                    text="← Back to Dashboard" />
+
+            <VBox alignment="CENTER" HBox.hgrow="ALWAYS">
+                <Label style="-fx-text-fill: white; -fx-font-size: 24; -fx-font-weight: bold;"
+                       text="Student Results" />
+                <Label style="-fx-text-fill: rgba(255,255,255,0.8); -fx-font-size: 14;"
+                       text="View academic performance and grades" />
+            </VBox>
+
+            <Region prefWidth="250" />
+        </HBox>
+    </top>
+
+    <!-- Main Content -->
+    <center>
+        <ScrollPane fitToWidth="true" style="-fx-background: #f8fafc; -fx-background-color: #f8fafc;">
+            <VBox alignment="TOP_CENTER" spacing="25" style="-fx-padding: 30;">
+
+                <!-- Student Information Card -->
+                <VBox maxWidth="800" spacing="15" style="-fx-background-color: white;
+                                                        -fx-background-radius: 12;
+                                                        -fx-padding: 25;
+                                                        -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);">
+                    <Label style="-fx-font-size: 18; -fx-font-weight: bold; -fx-text-fill: #262451;"
+                           text="Student Information" />
+
+                    <HBox spacing="20">
+                        <VBox spacing="8" style="-fx-background-color: #f8fafc;
+                                                -fx-background-radius: 8;
+                                                -fx-padding: 15;"
+                              HBox.hgrow="ALWAYS">
+                            <Label style="-fx-font-size: 13; -fx-text-fill: #64748b;"
+                                   text="Name" />
+                            <Label fx:id="nameValue" style="-fx-font-size: 16;
+                                                           -fx-font-weight: bold;
+                                                           -fx-text-fill: #262451;"
+                                   text="Ahmed Mohamed" />
+                        </VBox>
+
+                        <VBox spacing="8" style="-fx-background-color: #f8fafc;
+                                                -fx-background-radius: 8;
+                                                -fx-padding: 15;"
+                              HBox.hgrow="ALWAYS">
+                            <Label style="-fx-font-size: 13; -fx-text-fill: #64748b;"
+                                   text="Student ID" />
+                            <Label fx:id="idValue" style="-fx-font-size: 16;
+                                                         -fx-font-weight: bold;
+                                                         -fx-text-fill: #262451;"
+                                   text="2021001234" />
+                        </VBox>
+                    </HBox>
+                </VBox>
+
+                <!-- Statistics Cards -->
+                <HBox maxWidth="800" spacing="15">
+                    <VBox spacing="10" style="-fx-background-color: white;
+                                            -fx-background-radius: 12;
+                                            -fx-padding: 20;
+                                            -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);"
+                          HBox.hgrow="ALWAYS">
+                        <Label style="-fx-font-size: 14; -fx-text-fill: #64748b;"
+                               text="Total Courses" />
+                        <Label fx:id="totalCoursesValue" style="-fx-font-size: 28;
+                                                               -fx-font-weight: bold;
+                                                               -fx-text-fill: #262451;"
+                               text="6" />
+                    </VBox>
+
+                    <VBox spacing="10" style="-fx-background-color: white;
+                                            -fx-background-radius: 12;
+                                            -fx-padding: 20;
+                                            -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);"
+                          HBox.hgrow="ALWAYS">
+                        <Label style="-fx-font-size: 14; -fx-text-fill: #64748b;"
+                               text="Average Grade" />
+                        <Label fx:id="averageGradeValue" style="-fx-font-size: 28;
+                                                               -fx-font-weight: bold;
+                                                               -fx-text-fill: #262451;"
+                               text="Excellent" />
+                    </VBox>
+
+                    <VBox spacing="10" style="-fx-background-color: white;
+                                            -fx-background-radius: 12;
+                                            -fx-padding: 20;
+                                            -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);"
+                          HBox.hgrow="ALWAYS">
+                        <Label style="-fx-font-size: 14; -fx-text-fill: #64748b;"
+                               text="GPA" />
+                        <Label fx:id="gpaValue" style="-fx-font-size: 28;
+                                                      -fx-font-weight: bold;
+                                                      -fx-text-fill: #262451;"
+                               text="4.0" />
+                    </VBox>
+                </HBox>
+
+                <!-- Results Table -->
+                <VBox maxWidth="800" spacing="0" style="-fx-background-color: white;
+                                                       -fx-background-radius: 12;
+                                                       -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);">
+
+                    <!-- Table Header -->
+                    <HBox spacing="0" style="-fx-background-color: #262451;
+                                           -fx-background-radius: 12 12 0 0;
+                                           -fx-padding: 20;">
+                        <Label prefWidth="400" style="-fx-font-size: 16;
+                                                     -fx-font-weight: bold;
+                                                     -fx-text-fill: white;"
+                               text="Course Name"
+                               HBox.hgrow="ALWAYS" />
+                        <Label alignment="CENTER" prefWidth="100"
+                               style="-fx-font-size: 16;
+                                     -fx-font-weight: bold;
+                                     -fx-text-fill: white;"
+                               text="Degree" />
+                        <Label alignment="CENTER_RIGHT" prefWidth="150"
+                               style="-fx-font-size: 16;
+                                     -fx-font-weight: bold;
+                                     -fx-text-fill: white;"
+                               text="Grade" />
+                    </HBox>
+
+                    <!-- Dynamic Results Container -->
+                    <VBox fx:id="resultsContainer" spacing="0">
+                        <!-- النتايج هتتحط هنا تلقائي من الكود (من الداتابيز) -->
+                    </VBox>
+                </VBox>
+
+                <!-- Print Button -->
+                <HBox alignment="CENTER" maxWidth="800">
+                    <Button fx:id="btnPrintResults" style="-fx-background-color: #262451;
+                                                          -fx-text-fill: white;
+                                                          -fx-font-weight: bold;
+                                                          -fx-font-size: 14;
+                                                          -fx-background-radius: 8;
+                                                          -fx-padding: 12 30;"
+                            text="📄 Print Results" />
+                </HBox>
+
+            </VBox>
+        </ScrollPane>
+    </center>
+
+</BorderPane>

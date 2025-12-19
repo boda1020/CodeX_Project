@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" style="-fx-background-color: #f5f5f5;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.RegisterAdminsController">
+    <left>
+        <!-- Left Side - Dark Blue Panel -->
+        <VBox alignment="CENTER" prefHeight="700.0" prefWidth="450.0" style="-fx-background-color: #2B2D5C; -fx-background-radius: 0 0 0 0;" BorderPane.alignment="CENTER">
+            <children>
+                <!-- Icon -->
+                <Label style="-fx-font-size: 80px;" text="🎓" textFill="WHITE">
+                    <VBox.margin>
+                        <Insets bottom="20.0" />
+                    </VBox.margin>
+                </Label>
+
+                <!-- Title -->
+                <Label style="-fx-font-size: 36px; -fx-font-weight: bold; -fx-text-fill: white;" text="University">
+                    <font>
+                        <Font name="System Bold" size="36.0" />
+                    </font>
+                </Label>
+
+                <!-- Subtitle -->
+                <Label style="-fx-font-size: 18px; -fx-text-fill: #cccccc;" text="Results System">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets bottom="40.0" top="5.0" />
+                    </VBox.margin>
+                </Label>
+
+                <!-- Welcome Text -->
+                <Label style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: white;" text="Admin Registration!">
+                    <font>
+                        <Font name="System Bold" size="24.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets bottom="10.0" />
+                    </VBox.margin>
+                </Label>
+
+                <!-- Description -->
+                <Label style="-fx-font-size: 14px; -fx-text-fill: #cccccc;" text="Create administrator account">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+            </children>
+        </VBox>
+    </left>
+
+    <center>
+        <!-- Right Side - Registration Form -->
+        <VBox alignment="TOP_CENTER" prefHeight="700.0" prefWidth="450.0" spacing="12.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets bottom="30.0" left="60.0" right="60.0" top="30.0" />
+            </padding>
+            <children>
+                <!-- Register Title -->
+                <Label style="-fx-font-size: 32px; -fx-font-weight: bold; -fx-text-fill: #2B2D5C;" text="Register">
+                    <font>
+                        <Font name="System Bold" size="32.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets bottom="5.0" />
+                    </VBox.margin>
+                </Label>
+
+                <!-- Subtitle -->
+                <Label style="-fx-font-size: 13px; -fx-text-fill: #888888;" text="Please enter administrator details to create account">
+                    <font>
+                        <Font size="13.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets bottom="15.0" />
+                    </VBox.margin>
+                </Label>
+
+                <!-- Admin Label -->
+                <Label style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #2B2D5C;" text="Administrator">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets bottom="5.0" />
+                    </VBox.margin>
+                </Label>
+
+                <!-- Full Name Field -->
+                <TextField fx:id="fullNameField" prefHeight="40.0" prefWidth="330.0" promptText="Full Name" style="-fx-background-color: #f5f5f5; -fx-background-radius: 5px; -fx-border-color: transparent; -fx-padding: 10px; -fx-font-size: 14px; -fx-text-fill: #333333; -fx-prompt-text-fill: #999999;">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </TextField>
+
+                <!-- Username Field -->
+                <TextField fx:id="usernameField" prefHeight="40.0" prefWidth="330.0" promptText="Admin Username" style="-fx-background-color: #f5f5f5; -fx-background-radius: 5px; -fx-border-color: transparent; -fx-padding: 10px; -fx-font-size: 14px; -fx-text-fill: #333333; -fx-prompt-text-fill: #999999;">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </TextField>
+
+                <!-- Email Field -->
+                <TextField fx:id="emailField" prefHeight="40.0" prefWidth="330.0" promptText="Official Email" style="-fx-background-color: #f5f5f5; -fx-background-radius: 5px; -fx-border-color: transparent; -fx-padding: 10px; -fx-font-size: 14px; -fx-text-fill: #333333; -fx-prompt-text-fill: #999999;">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </TextField>
+
+                <!-- Department TextField -->
+                <TextField fx:id="departmentField" prefHeight="40.0" prefWidth="330.0" promptText="Department (e.g., Computer Science)" style="-fx-background-color: #f5f5f5; -fx-background-radius: 5px; -fx-border-color: transparent; -fx-padding: 10px; -fx-font-size: 14px; -fx-text-fill: #333333; -fx-prompt-text-fill: #999999;">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </TextField>
+
+                <!-- Admin Access Code Field -->
+                <TextField fx:id="adminCodeField" prefHeight="40.0" prefWidth="330.0" promptText="Admin Access Code (Required)" style="-fx-background-color: #f5f5f5; -fx-background-radius: 5px; -fx-border-width: 2px; -fx-border-radius: 5px; -fx-padding: 10px; -fx-font-size: 14px; -fx-text-fill: #333333; -fx-prompt-text-fill: #999999;">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </TextField>
+
+                <!-- Password Field -->
+                <PasswordField fx:id="passwordField" prefHeight="40.0" prefWidth="330.0" promptText="Password" style="-fx-background-color: #f5f5f5; -fx-background-radius: 5px; -fx-border-color: transparent; -fx-padding: 10px; -fx-font-size: 14px; -fx-text-fill: #333333; -fx-prompt-text-fill: #999999;">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </PasswordField>
+
+                <!-- Confirm Password Field -->
+                <PasswordField fx:id="confirmPasswordField" prefHeight="40.0" prefWidth="330.0" promptText="Confirm Password" style="-fx-background-color: #f5f5f5; -fx-background-radius: 5px; -fx-border-color: transparent; -fx-padding: 10px; -fx-font-size: 14px; -fx-text-fill: #333333; -fx-prompt-text-fill: #999999;">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </PasswordField>
+
+                <!-- Phone Number Field -->
+                <TextField fx:id="phoneField" prefHeight="40.0" prefWidth="330.0" promptText="Phone Number" style="-fx-background-color: #f5f5f5; -fx-background-radius: 5px; -fx-border-color: transparent; -fx-padding: 10px; -fx-font-size: 14px; -fx-text-fill: #333333; -fx-prompt-text-fill: #999999;">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets bottom="5.0" />
+                    </VBox.margin>
+                </TextField>
+
+                <!-- Register Button -->
+                <Button fx:id="registerBtn" mnemonicParsing="false" onAction="#handleRegister" prefHeight="45.0" prefWidth="330.0" style="-fx-background-color: #2B2D5C; -fx-background-radius: 5px; -fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold; -fx-cursor: hand;" text="Register as Admin">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets top="5.0" />
+                    </VBox.margin>
+                </Button>
+
+                <!-- Login Link -->
+                <HBox alignment="CENTER" prefHeight="30.0" prefWidth="330.0" spacing="5.0">
+                    <children>
+                        <Label style="-fx-font-size: 13px; -fx-text-fill: #666666;" text="Already have your account?">
+                            <font>
+                                <Font size="13.0" />
+                            </font>
+                        </Label>
+                        <Hyperlink fx:id="loginLink" onAction="#handleLoginLink" style="-fx-text-fill: #0066cc; -fx-font-size: 13px; -fx-underline: true;" text="Login here">
+                            <font>
+                                <Font size="13.0" />
+                            </font>
+                        </Hyperlink>
+                    </children>
+                    <VBox.margin>
+                        <Insets top="5.0" />
+                    </VBox.margin>
+                </HBox>
+
+                <!-- Footer -->
+                <Label style="-fx-font-size: 11px; -fx-text-fill: #999999;" text="© 2024 University System">
+                    <font>
+                        <Font size="11.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                </Label>
+            </children>
+        </VBox>
+    </center>
+</BorderPane>
